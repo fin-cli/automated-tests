@@ -28,18 +28,18 @@ set -e
 
 BUILD_DIR="$(pwd)"
 
-if [ -z "$WP_VERSION" ]; then
-	export WP_VERSION="latest"
+if [ -z "$FP_VERSION" ]; then
+	export FP_VERSION="latest"
 fi
 
 if [ "${TRAVIS_BUILD_DIR+x}" ]; then
 	BUILD_DIR="$TRAVIS_BUILD_DIR"
 fi
 
-if [ "$WP_VERSION" = "latest" ]; then
-	echo "WP_VERSION set to 'latest', detecting actual version number..."
-	export WP_VERSION="$(curl -s https://api.wordpress.org/core/version-check/1.7/ | jq -r ".offers[0].current")"
-	echo "WP_VERSION => $WP_VERSION"
+if [ "$FP_VERSION" = "latest" ]; then
+	echo "FP_VERSION set to 'latest', detecting actual version number..."
+	export FP_VERSION="$(curl -s https://api.finpress.org/core/version-check/1.7/ | jq -r ".offers[0].current")"
+	echo "FP_VERSION => $FP_VERSION"
 fi
 
 if [ "${TEST_PHAR+x}" ]; then

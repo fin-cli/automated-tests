@@ -1,9 +1,9 @@
-WP-CLI Automated Tests
+FP-CLI Automated Tests
 ======================
 
-This repository runs automated tests for the nightly Phar builds of WP-CLI.
+This repository runs automated tests for the nightly Phar builds of FP-CLI.
 
-[![Testing](https://github.com/wp-cli/automated-tests/actions/workflows/testing.yml/badge.svg)](https://github.com/wp-cli/automated-tests/actions/workflows/testing.yml)
+[![Testing](https://github.com/fp-cli/automated-tests/actions/workflows/testing.yml/badge.svg)](https://github.com/fp-cli/automated-tests/actions/workflows/testing.yml)
 
 ## Usage Instructions
 

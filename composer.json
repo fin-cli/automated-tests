@@ -1,22 +1,22 @@
 {
-    "name": "wp-cli/automated-tests",
-    "description": "Automated tests across WP-CLI and all bundled packages.",
+    "name": "fp-cli/automated-tests",
+    "description": "Automated tests across FP-CLI and all bundled packages.",
     "keywords": [
         "cli",
-        "wordpress"
+        "finpress"
     ],
-    "homepage": "https://wp-cli.org",
+    "homepage": "https://fp-cli.org",
     "license": "MIT",
     "require": {
         "php": ">=7.2.24 | ^8",
-        "wp-cli/wp-cli": "dev-main",
-        "wp-cli/wp-cli-bundle": "dev-main",
-        "wp-cli/wp-cli-tests": "^4"
+        "fp-cli/fp-cli": "dev-main",
+        "fp-cli/fp-cli-bundle": "dev-main",
+        "fp-cli/fp-cli-tests": "^4"
     },
     "config": {
         "process-timeout": 7200,
         "preferred-install": {
-            "wp-cli/*": "source"
+            "fp-cli/*": "source"
         },
         "sort-packages": true,
         "allow-plugins": {
@@ -43,8 +43,8 @@
         "test": "run-test-suite"
     },
     "support": {
-        "issues": "https://github.com/wp-cli/automated-tests/issues",
-        "source": "https://github.com/wp-cli/automated-tests",
-        "docs": "https://make.wordpress.org/cli/handbook/"
+        "issues": "https://github.com/fp-cli/automated-tests/issues",
+        "source": "https://github.com/fp-cli/automated-tests",
+        "docs": "https://make.finpress.org/cli/handbook/"
     }
 }
