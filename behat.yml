@@ -1,191 +1,191 @@
 # behat.yml
 default:
   suites:
-    # FP-CLI bundle
-    fp-cli/fp-cli-bundle:
+    # FIN-CLI bundle
+    fin-cli/fin-cli-bundle:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/fp-cli-bundle/features
+        - vendor/fin-cli/fin-cli-bundle/features
 
-    # FP-CLI framework
-    fp-cli/fp-cli:
+    # FIN-CLI framework
+    fin-cli/fin-cli:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/fp-cli/features
+        - vendor/fin-cli/fin-cli/features
 
-    # fp cache
-    fp-cli/cache-command:
+    # fin cache
+    fin-cli/cache-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/cache-command/features
+        - vendor/fin-cli/cache-command/features
 
-    # fp checksum
-    fp-cli/checksum-command:
+    # fin checksum
+    fin-cli/checksum-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/checksum-command/features
+        - vendor/fin-cli/checksum-command/features
 
-    # fp config
-    fp-cli/config-command:
+    # fin config
+    fin-cli/config-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/config-command/features
+        - vendor/fin-cli/config-command/features
 
-    # fp core
-    fp-cli/core-command:
+    # fin core
+    fin-cli/core-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/core-command/features
+        - vendor/fin-cli/core-command/features
 
-    # fp cron
-    fp-cli/cron-command:
+    # fin cron
+    fin-cli/cron-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/cron-command/features
+        - vendor/fin-cli/cron-command/features
 
-    # fp db
-    fp-cli/db-command:
+    # fin db
+    fin-cli/db-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/db-command/features
+        - vendor/fin-cli/db-command/features
 
-    # fp embed
-    fp-cli/embed-command:
+    # fin embed
+    fin-cli/embed-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/embed-command/features
+        - vendor/fin-cli/embed-command/features
 
-    # fp comment | fp menu | fp network | fp option | fp post | fp site | fp taxonomy | fp term | fp user
-    fp-cli/entity-command:
+    # fin comment | fin menu | fin network | fin option | fin post | fin site | fin taxonomy | fin term | fin user
+    fin-cli/entity-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/entity-command/features
+        - vendor/fin-cli/entity-command/features
 
-    # fp eval
-    fp-cli/eval-command:
+    # fin eval
+    fin-cli/eval-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/eval-command/features
+        - vendor/fin-cli/eval-command/features
 
-    # fp export
-    fp-cli/export-command:
+    # fin export
+    fin-cli/export-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/export-command/features
+        - vendor/fin-cli/export-command/features
 
-    # fp plugin | fp theme
-    fp-cli/extension-command:
+    # fin plugin | fin theme
+    fin-cli/extension-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/extension-command/features
+        - vendor/fin-cli/extension-command/features
 
-    # fp i18n
-    fp-cli/i18n-command:
+    # fin i18n
+    fin-cli/i18n-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/i18n-command/features
+        - vendor/fin-cli/i18n-command/features
 
-    # fp import
-    fp-cli/import-command:
+    # fin import
+    fin-cli/import-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/import-command/features
+        - vendor/fin-cli/import-command/features
 
-    # fp language
-    fp-cli/language-command:
+    # fin language
+    fin-cli/language-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/language-command/features
+        - vendor/fin-cli/language-command/features
 
-    # fp maintenance-mode
-    fp-cli/maintenance-mode-command:
+    # fin maintenance-mode
+    fin-cli/maintenance-mode-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/maintenance-mode-command/features
+        - vendor/fin-cli/maintenance-mode-command/features
 
-    # fp media
-    fp-cli/media-command:
+    # fin media
+    fin-cli/media-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/media-command/features
+        - vendor/fin-cli/media-command/features
 
-    # fp package
-    fp-cli/package-command:
+    # fin package
+    fin-cli/package-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/package-command/features
+        - vendor/fin-cli/package-command/features
 
-    # fp rewrite
-    fp-cli/rewrite-command:
+    # fin rewrite
+    fin-cli/rewrite-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/rewrite-command/features
+        - vendor/fin-cli/rewrite-command/features
 
-    # fp role
-    fp-cli/role-command:
+    # fin role
+    fin-cli/role-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/role-command/features
+        - vendor/fin-cli/role-command/features
 
-    # fp scaffold
-    fp-cli/scaffold-command:
+    # fin scaffold
+    fin-cli/scaffold-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/scaffold-command/features
+        - vendor/fin-cli/scaffold-command/features
 
-    # fp search-replace
-    fp-cli/search-replace-command:
+    # fin search-replace
+    fin-cli/search-replace-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/search-replace-command/features
+        - vendor/fin-cli/search-replace-command/features
 
-    # fp server
-    fp-cli/server-command:
+    # fin server
+    fin-cli/server-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/server-command/features
+        - vendor/fin-cli/server-command/features
 
-    # fp shell
-    fp-cli/shell-command:
+    # fin shell
+    fin-cli/shell-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/shell-command/features
+        - vendor/fin-cli/shell-command/features
 
-    # fp super-admin
-    fp-cli/super-admin-command:
+    # fin super-admin
+    fin-cli/super-admin-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/super-admin-command/features
+        - vendor/fin-cli/super-admin-command/features
 
-    # fp widget
-    fp-cli/widget-command:
+    # fin widget
+    fin-cli/widget-command:
       contexts:
-        - FP_CLI\Tests\Context\FeatureContext
+        - FIN_CLI\Tests\Context\FeatureContext
       paths:
-        - vendor/fp-cli/widget-command/features
+        - vendor/fin-cli/widget-command/features

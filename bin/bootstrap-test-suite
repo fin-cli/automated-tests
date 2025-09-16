@@ -28,18 +28,18 @@ set -e
 
 BUILD_DIR="$(pwd)"
 
-if [ -z "$FP_VERSION" ]; then
-	export FP_VERSION="latest"
+if [ -z "$FIN_VERSION" ]; then
+	export FIN_VERSION="latest"
 fi
 
 if [ "${TRAVIS_BUILD_DIR+x}" ]; then
 	BUILD_DIR="$TRAVIS_BUILD_DIR"
 fi
 
-if [ "$FP_VERSION" = "latest" ]; then
-	echo "FP_VERSION set to 'latest', detecting actual version number..."
-	export FP_VERSION="$(curl -s https://api.finpress.org/core/version-check/1.7/ | jq -r ".offers[0].current")"
-	echo "FP_VERSION => $FP_VERSION"
+if [ "$FIN_VERSION" = "latest" ]; then
+	echo "FIN_VERSION set to 'latest', detecting actual version number..."
+	export FIN_VERSION="$(curl -s https://api.finpress.org/core/version-check/1.7/ | jq -r ".offers[0].current")"
+	echo "FIN_VERSION => $FIN_VERSION"
 fi
 
 if [ "${TEST_PHAR+x}" ]; then

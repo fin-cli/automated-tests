@@ -1,9 +1,9 @@
-FP-CLI Automated Tests
+FIN-CLI Automated Tests
 ======================
 
-This repository runs automated tests for the nightly Phar builds of FP-CLI.
+This repository runs automated tests for the nightly Phar builds of FIN-CLI.
 
-[![Testing](https://github.com/fp-cli/automated-tests/actions/workflows/testing.yml/badge.svg)](https://github.com/fp-cli/automated-tests/actions/workflows/testing.yml)
+[![Testing](https://github.com/fin-cli/automated-tests/actions/workflows/testing.yml/badge.svg)](https://github.com/fin-cli/automated-tests/actions/workflows/testing.yml)
 
 ## Usage Instructions
 

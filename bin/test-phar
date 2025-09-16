@@ -31,13 +31,13 @@ if [ "$TEST_PACKAGE" == "none" ]; then
 fi
 
 if [ "$TEST_PACKAGE" == "all" ]; then
-	REPOS="fp-cli/fp-cli-bundle
-fp-cli/fp-cli
-$(cat ${BUILD_DIR}/vendor/fp-cli/fp-cli-bundle/composer.json | grep -oE "fp-cli/([a-z\-]*)-command")"
+	REPOS="fin-cli/fin-cli-bundle
+fin-cli/fin-cli
+$(cat ${BUILD_DIR}/vendor/fin-cli/fin-cli-bundle/composer.json | grep -oE "fin-cli/([a-z\-]*)-command")"
 fi
 
 if [ "$TEST_PACKAGE" == "commands" ]; then
-	REPOS="$(cat ${BUILD_DIR}/vendor/fp-cli/fp-cli-bundle/composer.json | grep -oE "fp-cli/([a-z\-]*)-command")"
+	REPOS="$(cat ${BUILD_DIR}/vendor/fin-cli/fin-cli-bundle/composer.json | grep -oE "fin-cli/([a-z\-]*)-command")"
 fi
 
 if [ "$TEST_PACKAGE" != "all" -a "$TEST_PACKAGE" != "commands" ]; then
@@ -70,33 +70,33 @@ for RELEASE in $RELEASES; do
 		SUFFIX="-v2-nightly"
 	fi
 
-	PHAR_URL="https://raw.githubusercontent.com/fp-cli/builds/gh-pages/phar/fp-cli${SUFFIX}.phar"
+	PHAR_URL="https://raw.githubusercontent.com/fin-cli/builds/gh-pages/phar/fin-cli${SUFFIX}.phar"
 	MD5_URL="${PHAR_URL}.md5"
 
 	# Download binary and verify MD5 checksum.
 	BIN_FOLDER="$(mktemp -d)"
-	wget -O "${BIN_FOLDER}/fp-cli.phar.md5" "$MD5_URL"
-	TARGET_MD5=$(cat "${BIN_FOLDER}/fp-cli.phar.md5")
-	wget -O "${BIN_FOLDER}/fp-cli.phar" "$PHAR_URL"
+	wget -O "${BIN_FOLDER}/fin-cli.phar.md5" "$MD5_URL"
+	TARGET_MD5=$(cat "${BIN_FOLDER}/fin-cli.phar.md5")
+	wget -O "${BIN_FOLDER}/fin-cli.phar" "$PHAR_URL"
 	if hash md5sum 2>/dev/null; then
-		DOWNLOAD_MD5=$(md5sum "${BIN_FOLDER}/fp-cli.phar" | cut -d ' ' -f 1)
+		DOWNLOAD_MD5=$(md5sum "${BIN_FOLDER}/fin-cli.phar" | cut -d ' ' -f 1)
 	else
-		DOWNLOAD_MD5=$(md5 -q "${BIN_FOLDER}/fp-cli.phar")
+		DOWNLOAD_MD5=$(md5 -q "${BIN_FOLDER}/fin-cli.phar")
 	fi
 	if [ ! "$TARGET_MD5" == "$DOWNLOAD_MD5" ]; then
 		echo MD5 mismatch, the download for the ${RELEASE} distribution seems to be corrupt.
 		exit 1
 	fi
 
-	export FP_CLI_BIN_DIR="${BIN_FOLDER}"
-	mv "${FP_CLI_BIN_DIR}/fp-cli.phar" "${FP_CLI_BIN_DIR}/fp"
-	chmod +x "${BIN_FOLDER}/fp"
-	echo "Using binary ${BIN_FOLDER}/fp"
+	export FIN_CLI_BIN_DIR="${BIN_FOLDER}"
+	mv "${FIN_CLI_BIN_DIR}/fin-cli.phar" "${FIN_CLI_BIN_DIR}/fin"
+	chmod +x "${BIN_FOLDER}/fin"
+	echo "Using binary ${BIN_FOLDER}/fin"
 
 	for REPO in $REPOS; do
 
 		echo "Testing ${RELEASE}:${REPO}..."
-		BEHAT_TAGS=$(BEHAT_FEATURES_FOLDER=${BUILD_DIR}/vendor/${REPO}/features php ${BUILD_DIR}/vendor/fp-cli/fp-cli-tests/utils/behat-tags.php)
+		BEHAT_TAGS=$(BEHAT_FEATURES_FOLDER=${BUILD_DIR}/vendor/${REPO}/features php ${BUILD_DIR}/vendor/fin-cli/fin-cli-tests/utils/behat-tags.php)
 		echo "Behat Tags: $BEHAT_TAGS"
 
 		set +e

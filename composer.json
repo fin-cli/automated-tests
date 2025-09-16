@@ -1,22 +1,22 @@
 {
-    "name": "fp-cli/automated-tests",
-    "description": "Automated tests across FP-CLI and all bundled packages.",
+    "name": "fin-cli/automated-tests",
+    "description": "Automated tests across FIN-CLI and all bundled packages.",
     "keywords": [
         "cli",
         "finpress"
     ],
-    "homepage": "https://fp-cli.org",
+    "homepage": "https://fin-cli.org",
     "license": "MIT",
     "require": {
         "php": ">=7.2.24 | ^8",
-        "fp-cli/fp-cli": "dev-main",
-        "fp-cli/fp-cli-bundle": "dev-main",
-        "fp-cli/fp-cli-tests": "^4"
+        "fin-cli/fin-cli": "dev-main",
+        "fin-cli/fin-cli-bundle": "dev-main",
+        "fin-cli/fin-cli-tests": "^4"
     },
     "config": {
         "process-timeout": 7200,
         "preferred-install": {
-            "fp-cli/*": "source"
+            "fin-cli/*": "source"
         },
         "sort-packages": true,
         "allow-plugins": {
@@ -43,8 +43,8 @@
         "test": "run-test-suite"
     },
     "support": {
-        "issues": "https://github.com/fp-cli/automated-tests/issues",
-        "source": "https://github.com/fp-cli/automated-tests",
+        "issues": "https://github.com/fin-cli/automated-tests/issues",
+        "source": "https://github.com/fin-cli/automated-tests",
         "docs": "https://make.finpress.org/cli/handbook/"
     }
 }
